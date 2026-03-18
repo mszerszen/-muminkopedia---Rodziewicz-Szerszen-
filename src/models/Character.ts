@@ -16,4 +16,4 @@ const CharacterSchema = new mongoose.Schema({
     bestFriend: { type: Types.ObjectId, ref: "BestFriend", required: true },
 })
 
-export default mongoose.models
+export default mongoose.model<Character>('Character', CharacterSchema)

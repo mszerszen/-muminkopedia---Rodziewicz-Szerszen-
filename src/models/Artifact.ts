@@ -12,4 +12,4 @@ const ArtifactSchema = new mongoose.Schema({
     owner: { type: Types.ObjectId, ref: "BestFriend", required: true },
 })
 
-export default mongoose.models
+export default mongoose.model<Artifact>('Artifact', ArtifactSchema)
