@@ -1,5 +1,5 @@
-import {Character} from "../models/Character";
+import CharacterModel, {Character} from "../models/Character";
 
 export async function getAllCharacters(): Promise<Character[]> {
-    return CharacterModel
+    return CharacterModel.find();
 }
