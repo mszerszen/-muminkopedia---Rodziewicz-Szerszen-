@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5005/characters
+
+### GET
+GET {{baseUrl}}
+Content-Type: application/json
+
+### POST
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Muminek 2",
+  "description": "Opis Muminka 2",
+  "species": "Rasa 2",
+  "inWinterSleep": false,
+  "bestFriend": "69c28df9657d3124e32dec2e"
+}
+
+### PUT
+PUT {{baseUrl}}/69c28df9657d3124e32dec2e
+Content-Type: application/json
+
+{
+  "species": "Jednak Inna Rasa",
+  "bestFriend": "69c28e24657d3124e32dec33"
+}
+
+### DELETE
+DELETE {{baseUrl}}/69c28df9657d3124e32dec2e
+Content-Type: application/json

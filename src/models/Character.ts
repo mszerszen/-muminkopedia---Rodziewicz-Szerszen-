@@ -13,7 +13,7 @@ const CharacterSchema = new mongoose.Schema({
     description: { type: String, required: true },
     species: { type: String, required: true },
     inWinterSleep: { type: Boolean, default: false },
-    bestFriend: { type: Types.ObjectId, ref: "BestFriend", required: true },
+    bestFriend: { type: Types.ObjectId, ref: "BestFriend", required: false },
 })
 
 export default mongoose.model<Character>('Character', CharacterSchema)
