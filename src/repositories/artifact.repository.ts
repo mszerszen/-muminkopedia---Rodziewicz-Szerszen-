@@ -9,3 +9,11 @@ export async function createArtifact(name: string, description: string, owner: T
     const newTask = new ArtifactModel({name, description, owner})
     return await newTask.save()
 }
+
+export async function updateArtifactById(id: string, updatedArtifact: Partial<Artifact>): Promise<Artifact | null> {
+    return ArtifactModel.findByIdAndUpdate(id, updatedArtifact, {returnDocument: "after"})
+}
+
+export async function deleteArtifactById(id: string): Promise<Artifact | null> {
+    return ArtifactModel.findByIdAndDelete(id)
+}
